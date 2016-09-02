@@ -1,0 +1,10 @@
+<h1>Dinosaurs</h1>
+
+<% @dinosaurs.each do |dinosaur| %>
+  <p><%= link_to dinosaur.name, dinosaur_path(dinosaur.id) %></p>
+<% end %>
+
+<%= link_to "[New Dinosaur]", new_dinosaur_path %>
+
+<!-- link_to makes link, followed path (new_dinosaur_path)
+path (new_dinosaur_path) is written in de routes.rb file    (as: :new_dinosaur)
